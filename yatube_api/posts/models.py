@@ -27,7 +27,7 @@ class Post(models.Model):
         blank=True,
         null=True,
     )
-    
+
     def __str__(self):
         return self.text
 
@@ -40,7 +40,7 @@ class Comment(models.Model):
     text = models.TextField()
     created = models.DateTimeField(
         'Дата добавления', auto_now_add=True, db_index=True)
-    
+
     def __str__(self):
         return f'"{self.text}" to post "{self.post}" by {self.author}'
 
