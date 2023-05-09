@@ -6,7 +6,8 @@ from rest_framework.pagination import LimitOffsetPagination
 from .permission import IsOwnerOrReadOnly
 from .serializers import (
     CommentSerializer, FollowSerializer, GroupSerializer, PostSerializer)
-from posts.models import Post, Group, User
+from posts.models import Post, Group
+
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
